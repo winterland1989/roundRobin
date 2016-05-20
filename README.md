@@ -10,7 +10,7 @@ import qualified Network.HTTP.Client as HTTP
 
 main :: IO ()
 main = do
-    reqs <- mapM HTTP.parseUrl ["foo.com", "bar.com", "qux.com"]
+    reqs <- mapM HTTP.parseUrl ["http://foo.com", "http://bar.com", "http://qux.com"]
     proxyTable <- RR.newRoundRobin HTTP.parseUrl reqs
     manager <- newManager defaultManagerSettings
 
