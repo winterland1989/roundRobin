@@ -3,8 +3,8 @@
 
 name:                roundRobin
 version:             0.1.0.0
--- synopsis:            
--- description:         
+synopsis:            A simple round-robin data type
+description:         This package provide a simple data type wrap a round-robin table. so you can select resources(host, connection...) using round-robin fashion. 
 license:             MIT
 license-file:        LICENSE
 author:              winterland1989
@@ -12,8 +12,11 @@ maintainer:          winterland1989@gmail.com
 -- copyright:           
 category:            Concurrency
 build-type:          Simple
-extra-source-files:  ChangeLog.md
+extra-source-files:  README.md
 cabal-version:       >=1.10
+source-repository head
+    type:                 git
+    location:             https://github.com/winterland1989/roundRobin.git
 
 library
   exposed-modules:     Data.RoundRobin
