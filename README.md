@@ -1,3 +1,6 @@
+[![Hackage](https://img.shields.io/hackage/v/roundRobin.svg?style=flat)](http://hackage.haskell.org/package/roundRobin)
+[![Travis-CI](https://travis-ci.org/winterland1989/roundRobin.svg)](https://travis-ci.org/winterland1989/roundRobin)
+
 # A simple round-robin data type
 
 This package provide a simple data type wrap a round-robin table. so you can select resources(host, connection...) using round-robin fashion.

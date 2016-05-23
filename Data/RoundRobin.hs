@@ -9,6 +9,7 @@ newtype RoundRobin a = RoundRobin (IORef [a]) deriving Eq
 -- | create a round-robin table from list.
 --
 -- If list is empty, an error will be raised.
+-- will use 'NonEmpty' in future(ghc 8 are widely used).
 newRoundRobin :: [a] -> IO (RoundRobin a)
 newRoundRobin xs =
     if null xs
