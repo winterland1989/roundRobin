@@ -19,4 +19,4 @@ newRoundRobin xs =
 -- | select an item from round-robin table.
 select :: RoundRobin a -> IO a
 select (RoundRobin ref) =
-    atomicModifyIORef ref $ \ (a:as) -> (as, a)
+    atomicModifyIORef' ref (\ (a:as) -> (as, a))
