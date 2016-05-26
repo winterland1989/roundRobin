@@ -18,5 +18,8 @@ newRoundRobin xs =
 
 -- | select an item from round-robin table.
 select :: RoundRobin a -> IO a
-select (RoundRobin ref) =
-    atomicModifyIORef' ref (\ (a:as) -> (as, a))
+select (RoundRobin ref) = atomicModifyIORef' ref (\ (a:as) -> (as, a))
+
+-- | set a new round-robin table.
+set :: RoundRobin a -> [a] -> IO ()
+set (RoundRobin ref) xs = atomicModifyIORef' ref (const (cycle xs , ()))
